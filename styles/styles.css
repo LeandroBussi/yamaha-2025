@@ -21,7 +21,7 @@ body {
     width: 100%;
     height:90vh;
     display: flex;
-    background-image: url(../img/r1m-2025.jpg);
+    background-image: url(../img/header-index.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -30,7 +30,7 @@ body {
     width: 100%;
     height:90vh;
     display: flex;
-    background-image: url(../img/header-background.webp);
+    background-image: url(../img/header-modelos.webp);
     background-size: cover;
     background-position: center;
 }
@@ -39,22 +39,26 @@ body {
     width: 100%;
     height: 90vh;
     display: flex;
-    background-image: url(../img/consecionario-oficial.jpg);
+    background-image: url(../img/header-sucursales.webp);
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 .header-novedades {
     position: relative;
     width: 100%;
     height:90vh;
     display: flex;
-    background-image: url(../img/novedades-header.jpg);
+    background-image: url(../img/header-novedades.jpg);
     background-size:cover;
     background-position: top;
 }
 .navbar-brand {
     width: 25vh;
     height: 10vh;
+}
+.navbar-collapse {
+    justify-content: end;
+    margin-right: 10%;
 }
 .header-modelos:before {
     content: '';
@@ -121,65 +125,30 @@ body {
 }
 .modelos-destacados-content {
     display: flex;
-    padding: 20px;
     width: 100%;
-    gap: 1rem; 
     flex-direction: column;
 }
-.modelos-destacados-content img {
+.carousel-item {
+    width: 100%; 
+    height: 100%;
+}
+.carousel-caption {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+}
+.carousel-item img {
     width: 100%;
     height: 100%;
-    border-radius: 0.5rem; 
-    align-items: center;
-}
-.mt03 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 60vh;
-}
-.mt03 p {
-    font-size: 0.9rem;
-    color: #333; 
-}
-.mt03:hover {
-    transform: scale(1.03);
-    transition: transform 0.5s ease;
-} 
-.modelos-btn {
-    background-color: #343870;
-    height: 3rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.2rem;
-    border: none;
-    cursor: pointer; 
+    object-fit: cover;
 }
 
-.modelos-btn:hover {
-    background-color: #505da3;
-    transition: background-color 0.3s ease; 
-}   
-.modelos-btn a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;  
+.carousel-caption h5 {
+    font-weight: bold;
+    font-size: 2rem;
 }
-.modelos-btn-conteiner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
+.carousel-caption p {
+    font-size: 1.5rem;
 }
-.modelos-btn-conteiner p {
-    font-size: 0.9rem;
-    color: #333; 
-    text-align: center;
-    padding-right: 0.5rem;
-}
+
 /* ---------------sucursales------------- */
 
 .sucursales-titulo h2 {
@@ -208,7 +177,7 @@ body {
 .street {
     display: flex;
     width: 100%;
-    background-image: url(../img/sobre-nosotros-mision.jpg);
+    background-image: url(../img/carousel-index2.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -252,7 +221,7 @@ body {
 .sport {
     display: flex;
     width: 100%;
-    background-image: url(../img/sobre-nosotros-equipo.jpg);
+    background-image: url(../img/carousel-index1.webp);
     background-size: cover;
     background-position: center;
 }
@@ -266,10 +235,10 @@ body {
     cursor: pointer;
     text-align: center;
 }
-.cross {
+.offroad {
     display: flex;
     width: 100%;
-    background-image: url(../img/sobre-nosotros-historia.jpg);
+    background-image: url(../img/carousel-index3.webp);
     background-size: cover;
     background-position: center;
 }
@@ -533,33 +502,46 @@ grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
 
-
-
+.navbar-footer {
+    padding: 1rem 0 1rem 2rem;
+}
+.navbar-footer ul {
+    list-style-type: none; 
+    padding-left: 1rem;
+    margin-left: 0;
+}
+.navbar-footer a {
+    text-decoration: none;
+    color: #252525;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 .div1 { grid-area: 1 / 1 / 2 / 3; 
-    color: #f0f0f0;
+    color: #252525;
     padding: 1rem;
     }
-.div1 h3 {
+.div2 h3 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
         font-weight: bold;
     }
-.div1 a {
+.div2 a {
         text-decoration: none;
-        color: #f0f0f0;
+        color: #252525;
         width: 50%;
         white-space: nowrap; 
         overflow: hidden;    
-        text-overflow: ellipsis; 
-        border: 1px solid black;
+        text-overflow: ellipsis;
 }
 .div2 { grid-area: 2 / 1 / 3 / 3;
     align-items: center;
     gap: 0;
     justify-content: center;
-    border: #000000 solid 2rem; }
+
+}
+
 .div2 img {
-        max-width: 4rem;
+        max-width: 3rem;
         min-width: 10%;
     }
 
@@ -589,24 +571,8 @@ grid-row-gap: 0px;
     .novedades-btn-conteiner {
         max-width: 50vh;
     }
-    /* modelos destacados */
-    .modelos-destacados-content {
-        flex-direction: row;
-        padding: 0 4% 1% 20%;
-        gap:25%;
-    }
-    .modelos-btn-conteiner {
-        justify-content: flex-end;
-    }
-    .modelos-btn {
-        max-width: 30vh;
-        height: 3rem;
-        margin-right: 5%;
-    }
-    .modelos-btn-conteiner p {
-        text-align: end;
-        margin-bottom: 5%;
-    }
+    
+
     /* sobre nosotros */
     .sobre-nosotros {
         flex-direction: row;
@@ -622,12 +588,12 @@ grid-row-gap: 0px;
         display: flex;
         align-items: end;
     }
+    /* footer */
     footer {
         width: 100%;
         height: 40vh;
         display: flex;
-        background-color: #ffffff;
-        color: #f0f0f0;
+        padding-top: 2rem;
     }
     .parent {
         display: grid;
@@ -636,44 +602,60 @@ grid-row-gap: 0px;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
+    .navbar-footer {
+        padding: 2rem 0 1rem 8rem;
+    }
+    .navbar-footer ul {
+        list-style-type: none; 
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .navbar-footer a {
+        text-decoration: none;
+        color: #252525;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
 
     .div1 { grid-area: 1 / 1 / 2 / 2;
-        color: #f0f0f0; }
-    .div1 h3 {
+        color: #252525;
+        padding: 1rem; }
+    .div2 h3 {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
         font-weight: bold;
-        margin-left: 10%;
+        padding-top: 2rem;
     }
-    .div1 p {
+    .div2 p {
         margin-left: 0;
         font-size: 1rem;
         min-width: 10rem;
         max-width: 30%
     }
-    .div1 a {
+    .div2 a {
         text-decoration: none;
-        color: #f0f0f0;
+        color: #252525;
     }
     .div2 { grid-area: 1 / 2 / 2 / 3;
         align-items: center;
         gap: 0;
         justify-content: center;
-        border: #000000 solid 2rem;}
+        padding-bottom: 1rem;
+    }
     .div2 img {
         max-width: 4rem;
         min-width: 10%;
+        padding-top: 2rem;
     }
     .div3 { grid-area: 2 / 1 / 3 / 3;
         color: #252525;
         margin-left: 20%;
         height: 5vh;
     }
-    .div4 { grid-area: 3 / 1 / 4 / 3; background-color: #000000;}
+    .div4 { grid-area: 3 / 1 / 4 / 3; padding-top: 2rem;}
 
     /* --modelos-- */
 
-    .street p, .sport p, .cross p {
+    .street p, .sport p, .offroad p {
         max-width: 40%;
     }
     .modelo-item img {
@@ -696,7 +678,7 @@ grid-row-gap: 0px;
         padding-bottom: 5vh;
         padding-left: 3vh;
     }
-    /* -moz-box-align: ;sucursales-- */
+    /* - sucursales-- */
     .sucursales-content {
         flex-direction: row;
         gap: 2rem;
@@ -721,6 +703,7 @@ grid-row-gap: 0px;
         padding: 0 3rem 2rem 2rem;
     }
     /* ---novedades--- */
+    
     .parent-novedades {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
