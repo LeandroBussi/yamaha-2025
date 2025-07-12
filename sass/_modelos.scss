@@ -1,0 +1,104 @@
+// header
+@use "layout/headers";
+
+
+// main
+
+.contenedor-modelos {
+    position: relative;
+}
+.btn-modelos {
+    background-color: #d60000;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 0.2rem;
+    height: 3rem;
+    max-width: 40%;
+    min-width: 30%;
+    font-size: 1.1rem;
+    a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+.contenedor-modelos::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+}
+.modelos-content-titulo {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    padding: 2rem 2rem 0 1rem;
+    position: relative;
+    z-index: 2;
+    h2 {
+        font-size: 5rem;
+        margin-left: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+.card-modelos {
+    z-index: 2;
+}
+
+.modelo-item {
+    display: flex;
+    flex-direction: column;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.4rem;
+    }
+}
+
+
+@mixin format-section-modelos ($display, $width, $bg-size, $bg-position, $bg-img) {
+    display: $display;
+    width: $width;
+    background-size: $bg-size;
+    background-position: $bg-position;
+    background-image: $bg-img;
+}
+
+.street {
+    @include format-section-modelos (flex, 100%, cover,center, url(../img/carousel-index2.jpg))
+}
+.sport {
+    @include format-section-modelos (flex, 100%, cover,center, url(../img/carousel-index1.webp))
+}
+
+.offroad {
+    @include format-section-modelos (flex, 100%, cover,center, url(../img/carousel-index3.webp))
+}
+
+@media only screen and (min-width:600px) {
+    .street p, .sport p, .offroad p {
+        max-width: 40%;
+    }
+    .modelo-item img {
+        max-width: 40vh;
+        height: auto;
+        border-radius: 0.4rem;
+    }
+    .modelos-content-titulo {
+        padding-bottom: 20vh;
+        h2 {
+            font-size: 15vh;
+            margin-left: 10vh;
+        }
+        p {
+            font-size: 3vh;
+            margin-left: 5vh;
+        }
+    }
+    .card-modelos {
+        padding-bottom: 5vh;
+        padding-left: 3vh;
+    }
+}

@@ -1,0 +1,271 @@
+// pages
+@use "novedades";
+@use "modelos";
+@use "contacto";
+@use "sucursales";
+
+// layout
+@use "layout/headers";
+@use "layout/catalog";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    
+}
+body {
+    margin: 0;
+    font-family: "Dosis", sans-serif;
+    background-color: #f0f0f0;
+}
+
+// main
+
+// modelos destacados
+.modelos-destacados {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    padding: 1rem 0;
+    .modelos-destacados-titulo h2 {
+        font-size: 2rem;
+        color: #000000;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .modelos-destacados-titulo p {
+        color: #333;
+        text-align: center;
+    }
+}
+
+.carousel-item {
+    width: 100%; 
+    height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.carousel:before {
+    content: ''; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+.carousel-caption {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    z-index: 2;
+    h5 {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+// sobre nosotros
+.sobre-nosotros {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+@mixin format-sobrenosotros($border, $width, $height, $bg-size, $bg-position, $o-flow, $position, $bg-image) {
+  border: $border;
+  width: $width;
+  height: $height;
+  background-size: $bg-size;
+  background-position: $bg-position;
+  overflow: $o-flow;
+  position: $position;
+  background-image: $bg-image;
+}
+
+.sobre-nosotros-mision {
+    @include format-sobrenosotros (#ffff solid 3px, 100%, 100%, cover, center, hidden, relative, url(../img/sobre-nosotros-mision.jpg))
+}
+.sobre-nosotros-equipo {
+    @include format-sobrenosotros (#ffff solid 3px, 100%, 100%, cover, left, hidden, relative, url(../img/sobre-nosotros-equipo.jpg));
+}
+.sobre-nosotros-historia {
+    @include format-sobrenosotros (#ffff solid 3px, 100%, 100%, cover, center, hidden, relative, url(../img/sobre-nosotros-historia.jpg));
+}
+.mision-contenedor, .sobre-nosotros-equipo .equipo-contenedor, .sobre-nosotros-historia .historia-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 2rem;
+    position: relative;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        z-index: 2;
+    }
+    p {
+        text-align: center;
+        z-index: 2; 
+    }
+}
+.mision-contenedor::before, .equipo-contenedor::before, .historia-contenedor::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.068); 
+    transition: background-color 0.4s ease; 
+    z-index: 1;
+}
+
+.mision-contenedor:hover, .equipo-contenedor:hover, .historia-contenedor:hover {
+    transition: transform 0.3s ease; 
+    transform: scale(1.05); 
+}
+
+.mision-contenedor:hover::before, .equipo-contenedor:hover::before, .historia-contenedor:hover::before {
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+// footer
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    .div1 { grid-area: 1 / 1 / 2 / 3; 
+        color: #252525;
+        padding: 1rem;
+        .navbar-footer {
+            padding: 1rem 0 1rem 2rem;
+            a {
+                text-decoration: none;
+                color: #252525;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            ul {
+                list-style-type: none; 
+                padding-left: 1rem;
+                margin-left: 0;
+            }
+        }
+    }
+    .div3 { grid-area: 3 / 1 / 4 / 3;
+        color: #252525;
+        height: 10vh;
+    }
+}
+.div2 { grid-area: 2 / 1 / 3 / 3;
+        align-items: center;
+        gap: 0;
+        justify-content: center;
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        a {
+        text-decoration: none;
+        color: #252525;
+        width: 50%;
+        white-space: nowrap; 
+        overflow: hidden;    
+        text-overflow: ellipsis;
+        }
+        img {
+        max-width: 3rem;
+        min-width: 10%;
+        }
+}
+
+@media only screen and (min-width:600px) {
+    .sobre-nosotros {
+        flex-direction: row;
+        height: 70vh;
+    }
+    footer {
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        padding-top: 2rem;
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            .navbar-footer {
+                padding: 2rem 0 1rem 8rem;
+                ul {
+                    list-style-type: none; 
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+                a {
+                    text-decoration: none;
+                    color: #252525;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    
+    
+
+    .div1 { grid-area: 1 / 1 / 2 / 2;
+        color: #252525;
+        padding: 1rem; }
+    .div2 { grid-area: 1 / 2 / 2 / 3;
+        align-items: center;
+        gap: 0;
+        justify-content: center;
+        padding-bottom: 1rem;
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding-top: 2rem;
+        }
+        p {
+            margin-left: 0;
+            font-size: 1rem;
+            min-width: 10rem;
+            max-width: 30%
+        }
+        img {
+            max-width: 4rem;
+            min-width: 10%;
+            padding-top: 2rem;
+        }
+        a {
+            text-decoration: none;
+            color: #252525;
+        }
+    }
+    
+    .div3 { grid-area: 2 / 1 / 3 / 3;
+        color: #252525;
+        margin-left: 20%;
+        height: 5vh;
+    }
+    .div4 { grid-area: 3 / 1 / 4 / 3; padding-top: 2rem;}
+}

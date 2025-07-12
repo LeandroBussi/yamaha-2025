@@ -1,0 +1,39 @@
+
+.class-catalog {
+    display: flex;
+    flex-direction: column;
+    .class-card {
+        margin: 2rem 1rem;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+        padding: 5%;
+        img {
+            width: 100%;
+        }
+        p {
+            margin: 1rem;
+        }
+        div {
+            button {
+                border: none;
+                border-radius: 0.2rem;
+                background-color: #d60000;
+                color:#ffff
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width:600px) {
+    .class-catalog {
+        padding-top: 5%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .class-card {
+            max-width: 20%;
+            padding: 0.5rem;
+        }
+    }
+}

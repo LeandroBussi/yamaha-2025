@@ -1,0 +1,49 @@
+
+// header
+@use "layout/headers.scss";
+
+// main
+.sucursales-titulo {
+    padding-top: 1rem;
+    h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
+.sucursales-content {
+    flex-direction: column;
+}
+
+.sucursales-mapa {
+    padding: 2rem 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    iframe {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (min-width:600px) {
+    .sucursales-content {
+        flex-direction: row;
+    }
+    .sucursales-titulo {
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+        justify-self: center;
+    }
+    .sucursales-mapa {
+        width: 50vw;
+        height: 90vh;
+        padding: 1rem 1.5rem 1rem 2rem;
+        iframe {
+            width: 100%;
+        }
+    }
+    .contenedor-list-group {
+        padding: 1rem 3rem 2rem 2rem;
+    }
+}

@@ -16,7 +16,7 @@
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../index.html"><img src="../img/logo-yamaha.svg" alt="logo yamaha"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -27,9 +27,20 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./novedades.html">Novedades</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./modelos.html">Modelos</a>
-                            </li>
+                            <div class="d-flex justify-content-center">
+                                <li class="nav-item dropdown" style="width: 2rem">
+                                    <a class="nav-link dropdown-toggle" href="./modelos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./street.html">Street</a></li>
+                                        <li><a class="dropdown-item" href="./sport.html">Sport</a></li>
+                                        <li><a class="dropdown-item" href="./offroad.html">Off-road</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./modelos.html">Modelos</a>
+                                </li> 
+                            </div>
                             <li class="nav-item">
                                 <a class="nav-link"  href="./contacto.html">Contacto</a>
                             </li>
@@ -46,16 +57,37 @@
             <div class="contacto-content">
                 <div class="contacto-titulo">
                     <h2 style="font-size: 4rem; font-weight: bold;">Contacto</h2>
-                    <p>Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos.</p>
+                    <p style="max-width: 85%;">Si tienes alguna pregunta o necesitas más información, no dudes en contactarnos.</p>
                 </div>
                 <div class="contacto-formulario-contenedor">
                     <form action="#" method="post" class="contacto-form">
-                        <label for="nombre">Nombre:</label>
+                        <label for="nombre">Nombre completo:</label>
                         <input type="text" id="nombre" name="nombre" required>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
                     
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
-                    
+                        <label>Selecciona tu género:</label>
+                        <div class="genero-contenedor d-flex" style="padding: 1rem 2rem 0 0">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Masculino</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Femenino</label>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Otro</label>
+                        </div>
+                        <div class="procedencia d-flex">
+
+                            <label for="localidad"style="padding-right: 1rem;">Localidad:<input type="localidad" id="localidad" name="localidad" required></label>
+                            
+                            <label for="provincia" style="padding-right: 1rem;">Provincia:<input type="provincia" id="provincia" name="provincia" required></label>
+                            
+                            <label for="pais">País:<input type="pais" id="pais" name="paisa" required></label>
+                            
+                        </div>
+
+
                         <label for="mensaje">Mensaje:</label>
                         <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
                     
@@ -84,7 +116,7 @@
                     <a href="http://www.x.com/yamahamotorarg?lang=es" target="_blank" rel="noopener noreferrer"><img src="../img/logo-x.png" alt="logo x"></a></div>
                     <h3>Sugerencias y reclamos</h3>
                     <p>Tel: 08005554433</p>
-                    <a href="http://www.yamaha-motor.com.ar/contacto" target="_blank" rel="noopener noreferrer"style="margin-left: 15%;">atencionalcliente@yamahaargentina.com.ar</a>
+                    <a href="http://www.yamaha-motor.com.ar/contacto" target="_blank" rel="noopener noreferrer">atencionalcliente@yamahaargentina.com.ar</a>
                 </div>
                 
             <div class="div3 py-3 px-4"><p>&copy; 2025 Yamaha. Todos los derechos reservados| Todos los derechos reservados | Política de privacidad | Política de Cookies</p></div>

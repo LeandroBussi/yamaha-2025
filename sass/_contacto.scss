@@ -1,0 +1,81 @@
+
+// main
+
+.contacto-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: transparent;
+    z-index: 2;
+    color: #ffffff;
+    margin-left: 1rem;
+    padding: 2rem 0;
+    width: 100%;
+
+}
+
+.contacto-content {
+    position: relative;
+    display: flex;
+    background-image: url(../img/oficinas-yamaha.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    width: 100%;
+    justify-content: end;
+    flex-direction: column;
+}
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    color: #ffffff;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    button {
+        background-color: #5e6dbe; 
+        color: white; 
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+}
+
+.contacto-content::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.068); 
+    transition: background-color 0.4s ease;
+    z-index: 1;
+}
+.contacto-content:hover::before {
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+
+@media only screen and (min-width:600px) {
+    .contacto-form {
+        max-width: 80vh;
+        margin: 5%;
+    }
+    .contacto-formulario-contenedor {
+        justify-content: end;
+        display: flex;
+        align-items: end;
+    }
+}

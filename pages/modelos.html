@@ -16,7 +16,7 @@
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../index.html"><img src="../img/logo-yamaha.svg" alt="logo yamaha"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -27,9 +27,20 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./novedades.html">Novedades</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./modelos.html">Modelos</a>
-                            </li>
+                            <div class="d-flex justify-content-center">
+                                <li class="nav-item dropdown" style="width: 2rem">
+                                    <a class="nav-link dropdown-toggle" href="./modelos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./street.html">Street</a></li>
+                                        <li><a class="dropdown-item" href="./sport.html">Sport</a></li>
+                                        <li><a class="dropdown-item" href="./offroad.html">Off-road</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./modelos.html">Modelos</a>
+                                </li> 
+                            </div>
                             <li class="nav-item">
                                 <a class="nav-link" href="./contacto.html">Contacto</a>
                             </li>
@@ -54,45 +65,54 @@
                 </div>
                 <div class="card-modelos d-flex flex-wrap justify-content-start">
                     <article class="modelo-item text-light px-3 py-3">
-                        <img src="../img/card-modelos.webp" alt="MT-03" >
-                        <button class="card-moto-btn">Mt-03</button>
+                        <img src="../img/mt03-card.jpg" alt="MT-03" >
                     </article>
                     <article class="modelo-item text-light px-3 py-3">
-                        <img src="../img/card-modelos.webp" alt="MT-07">
-                        <button class="card-moto-btn">Mt-07</button>
+                        <img src="../img/mt07-card.jpg" alt="MT-07">
                     </article>
+                    <div class="contenedor-btn-modelos d-flex justify-content-center w-100 py-4">
+                        <button class="btn-modelos">
+                            <a href="../pages/street.html">Ver más</a>
+                        </button>
+                    </div>
                 </div>
             </section>
             <section class="sport flex-column">
                 <div class="modelos-content-titulo text-light">
                     <h2>Sport</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates numquam, facere eum culpa labore iste minima quis provident commodi praesentium repellat rem excepturi?</p>
+                    <p>El diseño de aspecto aerodinámico, los genes deportivos no disimulados, la mejor elección para la práctica en pista, un control fuerte (no flexible), una configuración con sentido de la tecnología y una plataforma madura.</p>
                 </div>
                 <div class="card-modelos d-flex flex-wrap justify-content-start">
                     <article class="modelo-item text-light px-3 py-3">
-                        <img src="../img/card-modelos.webp" alt="yzf-r1m" >
-                        <button class="card-moto-btn">Yzf-r1m</button>
+                        <img src="../img/r1m-card.jpg" alt="yzf-r1m" >
                     </article>
                     <article class="modelo-item text-light px-3 py-3">
-                        <img src="../img/card-modelos.webp" alt="yzf-r6">
-                        <button class="card-moto-btn">Yzf-r6</button>
+                        <img src="../img/r9-card.jpg" alt="yzf-r9">
                     </article>
+                    <div class="contenedor-btn-modelos d-flex justify-content-center w-100 py-3">
+                        <button class="btn-modelos">
+                            <a href="../pages/sport.html">Ver más</a>
+                        </button>
+                    </div>
                 </div>
             </section>
             <section class="offroad flex-column">
                 <div class="modelos-content-titulo text-light">
                     <h2>Off-road</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ipsum cumque dolorem odio doloremque voluptas.</p>
+                    <p>Aléjate del ajetreo de la ciudad, ve a lugares fuera de los caminos trillados, siente el momento y sumérgete en la libertad.</p>
                 </div>
                 <div class="card-modelos d-flex flex-wrap justify-content-start">
                     <article class="modelo-item text-light px-3 py-3">
-                        <img src="../img/card-modelos.webp" alt="xtz-150" >
-                        <button class="card-moto-btn">Xtz-150</button>
+                        <img src="../img/xtz250-card.jpg" alt="xtz-250" >
                     </article>
                     <article class="modelo-item text-light px-3 py-3">
-                        <img src="../img/card-modelos.webp" alt="tenere-250">
-                        <button class="card-moto-btn">Teneré-250</button>
+                        <img src="../img/tenere700-card.jpg" alt="tenere-700">
                     </article>
+                    <div class="contenedor-btn-modelos d-flex justify-content-center w-100 py-3">
+                        <button class="btn-modelos">
+                            <a href="../pages/offroad.html">Ver más</a>
+                        </button>
+                    </div>
                 </div>
             </section>
         </div>
@@ -117,7 +137,7 @@
                     <a href="http://www.x.com/yamahamotorarg?lang=es" target="_blank" rel="noopener noreferrer"><img src="../img/logo-x.png" alt="logo x"></a></div>
                     <h3>Sugerencias y reclamos</h3>
                     <p>Tel: 08005554433</p>
-                    <a href="http://www.yamaha-motor.com.ar/contacto" target="_blank" rel="noopener noreferrer"style="margin-left: 15%;">atencionalcliente@yamahaargentina.com.ar</a>
+                    <a href="http://www.yamaha-motor.com.ar/contacto" target="_blank" rel="noopener noreferrer">atencionalcliente@yamahaargentina.com.ar</a>
                 </div>
                 
             <div class="div3 py-3 px-4"><p>&copy; 2025 Yamaha. Todos los derechos reservados| Todos los derechos reservados | Política de privacidad | Política de Cookies</p></div>
