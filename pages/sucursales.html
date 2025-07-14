@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 <header class="header-sucursales">
@@ -57,15 +58,19 @@
             <h2>Encontrá tu sucursal mas cercana</h2>
         </div>
         <div class="sucursales-content d-flex">
-            <div class="sucursales-mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13592889.73310171!2d-74.34054824614269!3d-33.719903353839385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sconcesionaria%20yamaha!5e0!3m2!1ses!2sar!4v1751471790694!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div data-aos="fade-right">
+                <div class="sucursales-mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13592889.73310171!2d-74.34054824614269!3d-33.719903353839385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sconcesionaria%20yamaha!5e0!3m2!1ses!2sar!4v1751471790694!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-            <div class="contenedor-list-group">
-                <div class="list-group">
-                    <a href="https://maps.app.goo.gl/yX2G2eBWikMq4UPu9" class="list-group-item list-group-item-action"><h3>Yamacity Concesionario Oficial y Exclusivo Yamaha.</h3><p>Av. Eva Perón 1398, B1834 Temperley, Provincia de Buenos Aires</p></a>
-                    <a href="https://maps.app.goo.gl/oAV56ziLEZH3Qe1B9" class="list-group-item list-group-item-action"><h3>YAMAHA</h3><p>Av. Hipólito Yrigoyen 8091, B1828CGL Gran Buenos Aires, Provincia de Buenos Aires</p></a>
-                    <a href="https://maps.app.goo.gl/CeCbBs9zkWhzM6a16" class="list-group-item list-group-item-action"><h3>YAMAHA MOTOR DOS</h3><p>Esquina Alvear, Córdoba 2314, S2000 Rosario, Santa Fe</p></a>
-                    <a href="https://maps.app.goo.gl/v5fDZJ1us5ovetPy9" class="list-group-item list-group-item-action"><h3>Bondio Motos - Sucursal YAMAHA</h3><p>Rivera Indarte 543, X5000 Córdoba</p></a>
+            <div data-aos="fade-left">
+                <div class="contenedor-list-group">
+                    <div class="list-group">
+                        <a href="https://maps.app.goo.gl/yX2G2eBWikMq4UPu9" class="list-group-item list-group-item-action"><h3>Yamacity Concesionario Oficial y Exclusivo Yamaha.</h3><p>Av. Eva Perón 1398, B1834 Temperley, Provincia de Buenos Aires</p></a>
+                        <a href="https://maps.app.goo.gl/oAV56ziLEZH3Qe1B9" class="list-group-item list-group-item-action"><h3>YAMAHA</h3><p>Av. Hipólito Yrigoyen 8091, B1828CGL Gran Buenos Aires, Provincia de Buenos Aires</p></a>
+                        <a href="https://maps.app.goo.gl/CeCbBs9zkWhzM6a16" class="list-group-item list-group-item-action"><h3>YAMAHA MOTOR DOS</h3><p>Esquina Alvear, Córdoba 2314, S2000 Rosario, Santa Fe</p></a>
+                        <a href="https://maps.app.goo.gl/v5fDZJ1us5ovetPy9" class="list-group-item list-group-item-action"><h3>Bondio Motos - Sucursal YAMAHA</h3><p>Rivera Indarte 543, X5000 Córdoba</p></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,6 +102,11 @@
         </div>
     </footer>
 
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>

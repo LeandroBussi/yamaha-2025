@@ -22,12 +22,15 @@
 
 .header-content {
   width: 100%;
-  position: relative;
+  position: fixed;
   z-index: 2;
   color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+.header-content .navbar {
+  box-shadow: 2px 5px 2px rgba(0, 0, 0, 0);
 }
 .header-content .navbar-brand {
   width: 25vh;
@@ -160,11 +163,12 @@
 
 .parent-novedades h2 {
   color: rgb(202, 5, 5);
+  padding-top: 0.5rem;
 }
 
 .novedades-titulo h1 {
   align-self: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
   font-size: 3rem;
 }
 
@@ -255,15 +259,6 @@
   text-decoration: none;
 }
 
-.contenedor-modelos::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
 .modelos-content-titulo {
   display: flex;
   flex-direction: column;
@@ -298,6 +293,7 @@
   background-size: cover;
   background-position: center;
   background-image: url(../img/carousel-index2.jpg);
+  position: relative;
 }
 
 .sport {
@@ -306,6 +302,7 @@
   background-size: cover;
   background-position: center;
   background-image: url(../img/carousel-index1.webp);
+  position: relative;
 }
 
 .offroad {
@@ -314,29 +311,47 @@
   background-size: cover;
   background-position: center;
   background-image: url(../img/carousel-index3.webp);
+  position: relative;
+}
+
+.street::before, .sport::before, .offroad::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  z-index: 1;
+}
+.street::after, .sport::after, .offroad::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  z-index: 1;
 }
 
 @media only screen and (min-width: 600px) {
-  .street p, .sport p, .offroad p {
-    max-width: 40%;
-  }
-  .modelo-item img {
-    max-width: 40vh;
-    height: auto;
-    border-radius: 0.4rem;
-  }
-  .modelos-content-titulo {
+  .street .modelos-content-titulo, .sport .modelos-content-titulo, .offroad .modelos-content-titulo {
     padding-bottom: 20vh;
   }
-  .modelos-content-titulo h2 {
+  .street .modelos-content-titulo h2, .sport .modelos-content-titulo h2, .offroad .modelos-content-titulo h2 {
     font-size: 15vh;
     margin-left: 10vh;
   }
-  .modelos-content-titulo p {
+  .street .modelos-content-titulo p, .sport .modelos-content-titulo p, .offroad .modelos-content-titulo p {
     font-size: 3vh;
     margin-left: 5vh;
+    max-width: 40%;
   }
-  .card-modelos {
+  .street .modelo-item img, .sport .modelo-item img, .offroad .modelo-item img {
+    max-width: 40vh;
+  }
+  .street .card-modelos, .sport .card-modelos, .offroad .card-modelos {
     padding-bottom: 5vh;
     padding-left: 3vh;
   }
@@ -369,7 +384,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 10rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem 2rem;
   color: #ffffff;
   width: 100%;
@@ -378,7 +393,7 @@
 }
 .contacto-form button {
   background-color: #5e6dbe;
-  color: white;
+  color: #ffffff;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
@@ -399,7 +414,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.068);
+  background-color: rgba(0, 0, 0, 0.2);
   transition: background-color 0.4s ease;
   z-index: 1;
 }
@@ -523,8 +538,8 @@ body {
   padding: 1rem 0;
 }
 .modelos-destacados .modelos-destacados-titulo h2 {
-  font-size: 2rem;
-  color: #000000;
+  font-size: 3rem;
+  color: #252525;
   padding: 1rem 0;
   text-align: center;
 }
@@ -554,7 +569,7 @@ body {
 
 .carousel-caption {
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
-  z-index: 2;
+  z-index: 1;
 }
 .carousel-caption h5 {
   font-weight: bold;
@@ -617,11 +632,11 @@ body {
 .mision-contenedor h2, .sobre-nosotros-equipo .equipo-contenedor h2, .sobre-nosotros-historia .historia-contenedor h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  z-index: 2;
+  z-index: 1;
 }
 .mision-contenedor p, .sobre-nosotros-equipo .equipo-contenedor p, .sobre-nosotros-historia .historia-contenedor p {
   text-align: center;
-  z-index: 2;
+  z-index: 1;
 }
 
 .mision-contenedor::before, .equipo-contenedor::before, .historia-contenedor::before {

@@ -1,3 +1,4 @@
+@use "variables";
 
 // main
 
@@ -7,7 +8,7 @@
     align-items: left;
     background-color: transparent;
     z-index: 2;
-    color: #ffffff;
+    color: variables.$color-text-light;
     margin-left: 1rem;
     padding: 2rem 0;
     width: 100%;
@@ -29,15 +30,15 @@
     display: flex;
     flex-direction: column;
     margin-right: 10rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: variables.$color-black-transparent-medium;
     padding: 1rem 2rem;
-    color: #ffffff;
+    color: variables.$color-text-light;
     width: 100%;
     position: relative;
     z-index: 2;
     button {
-        background-color: #5e6dbe; 
-        color: white; 
+        background-color: variables.$color-secondary; 
+        color: variables.$color-text-light; 
         padding: 10px 15px;
         border: none;
         border-radius: 5px;
@@ -59,12 +60,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.068); 
+    background-color: variables.$color-black-transparent-light; 
     transition: background-color 0.4s ease;
     z-index: 1;
 }
 .contacto-content:hover::before {
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: variables.$color-black-transparent-medium; 
 }
 
 
